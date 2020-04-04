@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UIView {
-    func animateMove(subview: UIView, to newSuperview: UIView) -> (() -> Void) {
+    func animateMove(subview: UIView, changes: (UIView) -> Void) -> (() -> Void) {
         // Get the location of the view before the move.
         let locationBefore = subview.superview!.convert(subview.center, to: self)
         
@@ -17,7 +17,7 @@ public extension UIView {
         
         // Move the view to the new view.
         subview.removeFromSuperview()
-        newSuperview.addSubview(subview)
+        changes(subview)
         self.layoutIfNeeded()
         
         // Get the location after the move and calculate the deltas.

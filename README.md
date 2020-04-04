@@ -15,11 +15,13 @@ import MoveSubviewAnimated
 
 Run the animation:
 ```swift
-    // animteMove(subview: UIView, to: UIView) returns a closure you can run inside 
-    let toAnimate = self.view.animateMove(subview: image, to: targetSuperView)
+// animteMove(subview: UIView, changes: (UIView) -> Void) returns a closure you can run inside an animation block. 
+let toAnimate = self.view.animateMove(subview: image) { subview in
+    targetView.addSubview(subview)
+}
 
-    // Perform whichever animations you like with `toAnimate`
-    UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: toAnimate, completion: nil)
+// Perform whichever animations you like with `toAnimate`
+UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: toAnimate, completion: nil)
 ```
 You can also modify the `UIView.animate` parameters as you wish to achieve different kinds of animations.
 
