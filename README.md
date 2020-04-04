@@ -1,15 +1,27 @@
 # MoveSubviewAnimated
 
-[![CI Status](https://img.shields.io/travis/Guy Kaplan/MoveSubviewAnimated.svg?style=flat)](https://travis-ci.org/Guy Kaplan/MoveSubviewAnimated)
 [![Version](https://img.shields.io/cocoapods/v/MoveSubviewAnimated.svg?style=flat)](https://cocoapods.org/pods/MoveSubviewAnimated)
 [![License](https://img.shields.io/cocoapods/l/MoveSubviewAnimated.svg?style=flat)](https://cocoapods.org/pods/MoveSubviewAnimated)
 [![Platform](https://img.shields.io/cocoapods/p/MoveSubviewAnimated.svg?style=flat)](https://cocoapods.org/pods/MoveSubviewAnimated)
 
 ## Example
+![Animation example recording](https://s6.gifyu.com/images/ezgif-6-ca2772722a9b.gif)
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Usage
+Import the module
+```swift
+import MoveSubviewAnimated
+```
 
-## Requirements
+Run the animation:
+```swift
+    // animteMove(subview: UIView, to: UIView) returns a closure you can run inside 
+    let toAnimate = self.view.animateMove(subview: image, to: targetSuperView)
+
+    // Perform whichever animations you like with `toAnimate`
+    UIView.animate(withDuration: 1, delay: 0, options: [.allowUserInteraction], animations: toAnimate, completion: nil)
+```
+You can also modify the `UIView.animate` parameters as you wish to achieve different kinds of animations.
 
 ## Installation
 
@@ -17,7 +29,7 @@ MoveSubviewAnimated is available through [CocoaPods](https://cocoapods.org). To 
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MoveSubviewAnimated'
+pod 'MoveSubviewAnimated', :git => "https://github.com/gkpln3/MoveSubviewAnimated.git"
 ```
 
 ## Author
