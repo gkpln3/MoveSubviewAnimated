@@ -6,6 +6,7 @@
 
 ## Example
 ![Animation example recording](https://s6.gifyu.com/images/ezgif-6-ca2772722a9b.gif)
+![Animation example recording](https://s6.gifyu.com/images/ezgif-6-d622bd80dba9.gif)
 
 ## Usage
 Import the module
