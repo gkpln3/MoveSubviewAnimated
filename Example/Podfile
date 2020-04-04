@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MoveSubviewAnimated_Tests' do
+  pod 'MoveSubviewAnimated', :path => '../'
+  
+  
+end
