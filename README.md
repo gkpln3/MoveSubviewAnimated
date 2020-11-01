@@ -19,6 +19,8 @@ import MoveSubviewAnimated
 ### Run the animation:
 
 `self.view` should be a parent of both views, calculations will be done relative to it.
+
+This example moves a view named `image` to be a subview of `targetView`.
 ```swift
 // animteMove(subview: UIView, changes: (UIView) -> Void) returns a closure you can run inside an animation block. 
 let toAnimate = self.view.animateMove(subview: image) { subview in
